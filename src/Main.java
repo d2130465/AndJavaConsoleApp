@@ -1,20 +1,17 @@
+import java.io.*;
 import java.util.*;
 
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
-		System.out.println("Hello World!");
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		LineNumberReader reader = new LineNumberReader(new FileReader("src/code.txt"));
+		
+		String line = null;
+		while ((line = reader.readLine()) != null)
+		{
+			System.out.printf(line + "\r\n");
+			
+		}
 	}
 }
